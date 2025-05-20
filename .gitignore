@@ -1,0 +1,10 @@
+/.vs
+/x64
+*.exe
+*.obj
+*.zip
+*.ilk
+*.log
+*.idb
+*.pdb
+*.recipe
