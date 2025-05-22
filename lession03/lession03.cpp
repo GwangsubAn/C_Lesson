@@ -69,12 +69,6 @@ int main()
 	result = 1 <= 5;
 	printf("result : %d\n", result);
 
-
-
-
-
-
-
 	}
 
 
