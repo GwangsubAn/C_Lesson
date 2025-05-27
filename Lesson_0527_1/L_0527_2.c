@@ -3,47 +3,20 @@
 #include <conio.h>  // Windows OS전용 입출력 관련 함수 정의 헤더
 #include <stdlib.h> // 자주 사용되는 유틸리티 (편의성을 높여주는) 함수들이 정의된 헤더
 
-
-
 int main()
 {
-	// 반복문 : while, do ~ while, for
-	/*int i = 0;
-	while (i < 10)
-		printf("%-5d", i++);
-	printf("\n");
-	printf("while 반복문이 종료되었습니다\n");*/
+	
 
-
-	// 구구단 4단을 출력하세요
-	/*int i = 1;
-	while (i < 10)
+	/*
+	do
 	{
-		printf("4 x %d = %2d\n", i, 4 * i);
-		i++;
-	}
-	printf("\n");
-	printf("while 반복문이 종료되었습니다\n");*/
 
-	// 20이하의 3의 배수를 출력하세요
-	/*int i = 1;
-	while (i <= 20)
+	} while (조건식);
+	*/
+
+	char ch = '1';
+	do
 	{
-		if (!(i % 3))
-		{
-			printf("%d\t", i);
-		}
-		i++;
-	}
-	printf("\n");
-	printf("while 반복문이 종료되었습니다\n");*/
-
-	// 반복횟수가 명확하지 않을 때
-	char ch='1';
-	while (ch !='x' && ch != 'X')
-	{
-		system("cls"); // stdlib.h에 정의되어 있음  "프롬프트에서 실행될 명령을 ""에 입력하여 사용
-
 		printf("1. 새파일\n");
 		printf("2. 파일열기\n");
 		printf("3. 파일저장\n");
@@ -70,12 +43,13 @@ int main()
 			printf("4. 인쇄 선택되었습니다\n");
 			break;
 		case 'x':
+		case 'X':
 			printf("x. 종료 선택되었습니다\n");
 			break;
+
 		default:
 			printf("해당메뉴 없음\n");
 		}
-	}
-
+	} while (ch != 'x' && ch != 'X');
 	return 0;
 }
