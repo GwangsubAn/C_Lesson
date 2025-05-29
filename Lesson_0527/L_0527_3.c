@@ -16,11 +16,11 @@ int main()
 		printf("%d\n", i);
 	}
 	*/
-	for (int j = 2; j < 10; j++)
+	for (int j = 1; j < 10; j++)
 	{
-		for (int i = 1; i < 10; i++)
+		for (int i = 2; i < 10; i++)
 		//{
-			printf("%d x %d = %d\n", j,i,j*i);
+			printf("%d x %d = %d\t", i, j,j*i);
 		//}
 		printf("\n");
 	}
