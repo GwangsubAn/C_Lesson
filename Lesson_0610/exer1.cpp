@@ -18,7 +18,9 @@ void print_char(char* pt, int count)
 	int i;
 	for (i = 0;i < count;i++)
 	{
-		printf("%c\n", pt[i] -('a' - 'A'));
+		//printf("%c\n", pt[i] -('a' - 'A'));
+		printf("%c\n", *(pt+i) - ('a' - 'A'));
+
 	}
 }
 int main()

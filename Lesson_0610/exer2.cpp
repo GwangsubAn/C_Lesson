@@ -11,12 +11,12 @@ cde
 de
 e
 */
-void print_char(char* ptr, int count)
+void print_char(char* pt, int cnt)
 {
 	int i;
-	for (i = 0; i < count; i++)
+	for (i = 0; i < cnt; i++)
 	{
-		printf("%s\n", ptr + i);
+		printf("%s\n", pt + i);
 	}
 }
 int main()
