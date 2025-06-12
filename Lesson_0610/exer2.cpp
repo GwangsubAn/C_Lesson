@@ -16,7 +16,8 @@ void print_char(char* pt, int cnt)
 	int i;
 	for (i = 0; i < cnt; i++)
 	{
-		printf("%s\n", pt + i);
+		//printf("%s\n", pt + i);  //  임시 포인터 변수 (오프셋) 개념
+		printf("%s\n", pt++);      //  pt포인터 변수 자체를 이동
 	}
 }
 int main()

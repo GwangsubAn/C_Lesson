@@ -13,20 +13,29 @@ D
 E
 */
 
-void print_char(char* pt, int count)
+void print_char(char* pt, int count)  // char sz[] 동일 표현임
 {
 	int i;
+//	if (pt == NULL || count==0)  // 포인터 변수에 0을 입력할때 pt=NULLpt[i] - 32
+	if (!pt || !count)  // 포인터 변수에 0을 입력할때 pt=NULLpt[i] - 32
+		return ;
+
 	for (i = 0;i < count;i++)
 	{
-		//printf("%c\n", pt[i] -('a' - 'A'));
-		printf("%c\n", *(pt+i) - ('a' - 'A'));
+		if (pt[i] >= 'a' && pt[i] <= 'z')
+			pt[i] -= 32;
 
+		printf("%c\n", pt[i]);
+		// printf("%c\n", *(pt+i));
 	}
 }
 int main()
 {
 	char sz[] = "abcde";	
 	print_char(sz, strlen(sz));
+
+	// printf("%s\n", sz++); 배열주소는 상수값으로 변경 불가능
+	// char* psz = sz;
 
 	return 0;
 }
