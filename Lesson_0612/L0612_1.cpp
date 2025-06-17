@@ -6,7 +6,7 @@
 
 #define COUNT 10  // 매크로 상수 정의
 
-//void randon_value(int* arr, int cnt)
+// void randon_value(int* arr, int cnt)
 void randon_value(int arr[], int cnt)
 
 {
@@ -106,6 +106,8 @@ int main()
 	sequence_sort(arr, COUNT);
 	print_array(arr, COUNT);
 
+
+	// 순차 탐색
 	printf("순차탐색 =========\n");
 
 	int num;
@@ -122,3 +124,4 @@ int main()
 
 	return 0;
 }
+
