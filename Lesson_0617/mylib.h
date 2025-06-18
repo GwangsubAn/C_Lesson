@@ -19,5 +19,8 @@ int find_binary(int arr[], int count, int to_find);
 int sum(int n);
 int factorial(int n);
 void my_qsort(int arr[], int left, int right);
+void ascending_sort(int arr[], int count);
+int sequence_find(int arr[], int count, int to_find);
+
 #endif
 

@@ -129,3 +129,26 @@ void my_qsort(int arr[], int left, int right)
 	my_qsort(arr,j+1, right);
 
 }
+
+void ascending_sort(int arr[], int count)
+{
+	if (!arr || !count) return;
+
+	for (int i = 0; i < count - 1; i++)
+	{
+		for (int j = i + 1; j < count; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				swap(arr + i, arr + j);
+			}
+		}
+	}
+}
+
+int sequence_find(int arr[], int count, int to_find)
+{
+
+	return 1;
+}
+
