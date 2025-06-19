@@ -82,8 +82,7 @@ void randon_value(int arr[], int cnt)
 	}
 }
 
-// 1~ 
-void randon_value(int arr[], int cnt,int max_val)
+void randon_value(int arr[], int cnt, int max_val)
 
 {
 	if (!arr || !cnt)
@@ -91,7 +90,7 @@ void randon_value(int arr[], int cnt,int max_val)
 
 	for (int i = 0; i < cnt; i++)
 	{
-		arr[i] = (rand() % max_val) +1;  //100으로 나누고 나머지를 취한다 100미만으로 제한
+		arr[i] = (rand() % max_val) + 1;  //100으로 나누고 나머지를 취한다 100미만으로 제한
 	}
 }
 

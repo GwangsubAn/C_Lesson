@@ -82,16 +82,20 @@ void randon_value(int arr[], int cnt)
 	}
 }
 
-// 1~ 
-void randon_value(int arr[], int cnt,int max_val)
+void randon_value(int arr[], int cnt, int max_val)
 
 {
-	if (!arr || !cnt)
-		return;
+	if (!arr || !cnt) return;
 
 	for (int i = 0; i < cnt; i++)
 	{
-		arr[i] = (rand() % max_val) +1;  //100으로 나누고 나머지를 취한다 100미만으로 제한
+		int num = 0;;
+		do
+		{
+			num = (rand() % max_val) + 1;
+		} while (find_value(arr, cnt, num) >= 0);
+
+		arr[i] = num;  //100으로 나누고 나머지를 취한다 100미만으로 제한
 	}
 }
 
@@ -133,13 +137,13 @@ void my_qsort(int arr[], int left, int right)
 		while (i <= right && arr[i] <= pivot) i++;
 
 		// 아직 i와 j가 교차하지 않았다면 두값을 서로 교환한다
-		while (j >= left+1 && arr[j] >= pivot) j--;
+		while (j >= left + 1 && arr[j] >= pivot) j--;
 		if (i <= j) swap(&arr[i], &arr[j]);
 	}
 	swap(&arr[left], &arr[j]);
 
 	my_qsort(arr, left, j - 1);
-	my_qsort(arr,j+1, right);
+	my_qsort(arr, j + 1, right);
 
 }
 
@@ -164,4 +168,5 @@ int sequence_find(int arr[], int count, int to_find)
 
 	return 1;
 }
+
 

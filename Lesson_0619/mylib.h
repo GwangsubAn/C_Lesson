@@ -8,10 +8,6 @@
 #include <stdlib.h>  // 문자열 관련 함수 정의 헤더
 #include <time.h>  // 
 #define COUNT 10  // 매크로 상수 정의
-#define ROW 5  // 매크로 상수 정의
-#define COL 6 // 매크로 상수 정의
-
-
 
 // 함수의 선언(원형)
 void randon_value(int arr[], int cnt);
@@ -25,7 +21,6 @@ int factorial(int n);
 void my_qsort(int arr[], int left, int right);
 void ascending_sort(int arr[], int count);
 int sequence_find(int arr[], int count, int to_find);
-int my_strlen(const char* psz);
 
 #endif
 
