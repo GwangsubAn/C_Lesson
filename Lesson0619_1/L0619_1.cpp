@@ -51,7 +51,7 @@ int main()
 
 
 
-	// 당첨번호 1차원 베열 생성
+	// 당첨번호 1차원 배열 생성
 	// 
 	// lotto : 5 x 6 
 
@@ -61,7 +61,7 @@ int main()
 
 	for (int i = 0; i < ROW; i++)
 	{
-		randon_value(lotto[i], COL,45);
+		random_value(lotto[i], COL,45);
 		my_qsort(lotto[i],0,COL-1);
 		//sequence_sort(lotto[i], COL);
 		print_array(lotto[i], COL);

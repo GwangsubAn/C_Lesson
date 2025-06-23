@@ -1,16 +1,16 @@
 #include "mylib.h"
 
 // void print_array(int arr[], int cnt)
-void print_array(int arr[], int cnt)
+void print_array(int* arr, int cnt)
 {
 	if (!arr || !cnt)
 		return;
 	for (int i = 0; i < cnt; i++)
 	{
-		printf("%3d ", arr[i]);
-		//printf("%3d ", *(arr + i));  // i * sizeof(type)
+		//printf("%3d ", arr[i]);
+		printf("%3d ", *(arr + i));  // i * sizeof(type)
 	}
-	//printf("\n");
+	printf("\n");
 }
 
 void swap(int* pa, int* pb)
@@ -70,7 +70,7 @@ int find_binary(int arr[], int count, int to_find)
 }
 
 // void randon_value(int* arr, int cnt)
-void random_value(int arr[], int cnt)
+void randon_value(int arr[], int cnt)
 
 {
 	if (!arr || !cnt)
@@ -82,7 +82,7 @@ void random_value(int arr[], int cnt)
 	}
 }
 
-void random_value(int arr[], int cnt, int max_val)
+void randon_value(int arr[], int cnt, int max_val)
 
 {
 	if (!arr || !cnt) return;
@@ -92,10 +92,10 @@ void random_value(int arr[], int cnt, int max_val)
 		int num = 0;;
 		do
 		{
-			num = (rand() % max_val) + 1;    // max_val(45)로 나누어 나머지를 취한값에 1을 더하여 1~45까지의 임의의 수 생성
-		} while (find_value(arr, cnt, num) >= 0);  // 배열에서 num값이 있으면 반복하여 임의의 수 생성
+			num = (rand() % max_val) + 1;
+		} while (find_value(arr, cnt, num) >= 0);
 
-		arr[i] = num;  
+		arr[i] = num;  //100으로 나누고 나머지를 취한다 100미만으로 제한
 	}
 }
 
