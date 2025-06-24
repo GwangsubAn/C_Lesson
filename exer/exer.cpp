@@ -28,8 +28,8 @@ int main()
 
 		for (int j = 0; j < COL; j++)
 		{
-			//if (find_value(lotto[i], COL, wins[j]) >= 0)
-			if (find_value(wins, COL, lotto[i][j]) >= 0)
+			if (find_value(lotto[i], COL, wins[j]) >= 0)
+			//if (find_value(wins, COL, lotto[i][j]) >= 0)
 			{
 				count++;
 			}
