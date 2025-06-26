@@ -75,9 +75,9 @@ void copy_person(PERSON* pSrc, PERSON* pDest)  //const : 함수안에서 변경 불가능(
 {
 	if (!pSrc || !pDest) return;
 	pDest->no = pSrc->no;
-	strcpy(pSrc->name, pSrc->name);
-	pSrc->age = pSrc->age;
-	pSrc->gender = pSrc->gender;
+	strcpy(pDest->name, pSrc->name);
+	pDest->age = pSrc->age;
+	pDest->gender = pSrc->gender;
 
 	//return &copy; // 지역변수의 주소를 반환하면 안됨
 }
