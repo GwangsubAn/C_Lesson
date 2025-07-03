@@ -4,7 +4,7 @@
 #include "mylib.h"
 typedef unsigned int UNIT;
 
-int* alloc_meomory(const UNIT size)
+int* alloc_memory(const UNIT size)
 {
 	int* ptr = (int*)malloc(size);
 
@@ -16,7 +16,7 @@ int* alloc_meomory(const UNIT size)
 	return ptr;
 }
 
-int alloc_memory(int** pptr,const UNIT size)  // const 는 size 값을 변경시틸수 없음, 음수값을 가질수 없음
+int alloc_memory(int** pptr, const UNIT size)  // const 는 size 값을 변경시틸수 없음, 음수값을 가질수 없음
 {
 	*pptr = (int*)malloc(size);
 
@@ -25,7 +25,7 @@ int alloc_memory(int** pptr,const UNIT size)  // const 는 size 값을 변경시틸수 �
 		printf("메모리 할당못함\n");
 		return;
 	}
-	return size;	
+	return size;
 }
 
 void print_array(const int* ptr, const UNIT size)
@@ -53,7 +53,7 @@ int main()
 	UNIT size = 10;
 
 	int* pArr = NULL; // 가변배열로 사용
-	
+
 	pArr = arr;
 	printf("pArr: ");
 	print_array(pArr, size);
@@ -61,7 +61,7 @@ int main()
 
 	size = 10 * sizeof(int);
 	//alloc_memory(&pArr, size);
-	alloc_memory(size);	
+	pArr = alloc_memory(size);
 
 	for (int i = 0; i < 10; i++)
 	{

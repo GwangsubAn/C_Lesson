@@ -7,10 +7,11 @@ typedef enum // MyColor´Â Data Type
 }MyColor;
 
 // 
-union MyUnion
+typedef union 
 {
-
-};
+	short n1;
+	long l1;
+}MyUnion;
 
 typedef struct
 {
@@ -59,6 +60,13 @@ int main()
 	MyColor my_color;
 	my_color = BLACK;
 	my_color = WHITE;
+
+	MyUnion u;
+	u.n1 = 10;
+	u.l1 = 2000;
+
+	printf("%d\n", u.n1);
+	printf("%d\n", u.l1);
 
 
 	return 0;
