@@ -1,4 +1,4 @@
-﻿#include"myheader.h"
+﻿#include "mylib.h"     
 
 
 int main()
@@ -19,17 +19,18 @@ int main()
 		menu = input_menu();
 		switch (menu)
 		{
-		case 5:
+		case '5':
 			insert_part(&pParts, nParts);
 			print_part(pParts, nParts);
+			break;
 		case 'x':
 		case 'X':
 			goto RELEASE_AREA;
 
 		}
 
-		printf("=--------------------\n");
-		printf("계속하려면 ------------\n");
+		printf("--------------------------------\n");
+		printf("계속하려면 아무키나 입력하세요 : ");
 		_getch();
 
 
